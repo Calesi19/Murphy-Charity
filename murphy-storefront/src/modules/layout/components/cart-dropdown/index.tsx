@@ -95,7 +95,7 @@ const CartDropdown = ({
         >
           <Popover.Panel
             static
-            className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border-x border-b border-gray-200 w-[420px] text-ui-fg-base"
+            className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border-x border-b border-gray-200 w-[420px] text-ui-fg-base rounded-xl"
           >
             <div className="p-4 flex items-center justify-center">
               <h3 className="text-large-semi">Cart</h3>
@@ -163,9 +163,9 @@ const CartDropdown = ({
                     </span>
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
-                    <Button className="w-full" size="large">
-                      Go to cart
-                    </Button>
+                    <button className="w-full py-2 bg-[#074790] text-white font-semibold text-lg rounded-lg">
+                      Visit Cart
+                    </button>
                   </LocalizedClientLink>
                 </div>
               </>
