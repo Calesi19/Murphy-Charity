@@ -1,10 +1,12 @@
 import { headers } from "next/headers"
 import { Suspense } from "react"
 
+import Image from "next/image"
 import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import Logo from "/public/logo.webp"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -24,7 +26,7 @@ export default async function Nav() {
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
             >
-              Murphy Store
+              <NavLogo />
             </LocalizedClientLink>
           </div>
 
@@ -61,6 +63,31 @@ export default async function Nav() {
           </div>
         </nav>
       </header>
+    </div>
+  )
+}
+
+function NavLogo() {
+  const imgUrl = Logo
+
+  return (
+    <div className="flex items-center">
+      <Image
+        width={48}
+        height={48}
+        src={imgUrl}
+        alt="Murphy Logo"
+      />
+      <div className="ml-2 hidden lg:block">
+        <div className="text-[#064790] font-bold">
+          <h1>MURPHY CHARITABLE FOUNDATION UGANDA</h1>
+        </div>
+        <div className="text-[#67B32E] font-bold flex justify-evenly items-center break-none">
+          <div className="bg-[#67B32E] w-full h-[2px] mr-2"></div>
+          <div className="whitespace-nowrap">SINCE 2018</div>
+          <div className="bg-[#67B32E] w-full h-[2px] ml-2"></div>
+        </div>
+      </div>
     </div>
   )
 }
