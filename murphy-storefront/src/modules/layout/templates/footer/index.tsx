@@ -1,7 +1,7 @@
 import { Text, clx } from "@medusajs/ui"
 import Link from "next/link"
 import { getCategoriesList, getCollectionsList } from "@lib/data"
-
+import { Facebook, Instagram, Youtube } from "lucide-react"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
 
@@ -36,26 +36,30 @@ export default async function Footer() {
           </Link>
         </ul>
         <ul className="flex flex-row p-4 space-x-10 place-content-center">
-          <Link href="/#">
-            <li id="facebook">F</li>
+          <Link href="https://www.facebook.com/murphycharityuganda">
+            <li id="facebook">
+              <Facebook />
+            </li>
           </Link>
-          <Link href="/#">
-            <li id="instagram">I</li>
+          <Link href="https://www.instagram.com/murphycharitablefoundation/">
+            <li id="instagram">
+              <Instagram />
+            </li>
           </Link>
-          <Link href="/#">
-            <li id="twitter">X</li>
-          </Link>
-          <Link href="/#">
-            <li id="youtube">Y</li>
+          
+          <Link href="https://www.youtube.com/@murphycharity_">
+            <li id="youtube">
+              <Youtube />
+            </li>
           </Link>
         </ul>
       </nav>
       <div className="w-full text-center">
-      <small id="copyright" className="p-4 text-center w-full">
-        Copyright © {(() => new Date().getFullYear())()} Murphy Charitable
-        Foundation Uganda. All rights reserved.
+        <small id="copyright" className="p-4 text-center w-full">
+          Copyright © {(() => new Date().getFullYear())()} Murphy Charitable
+          Foundation Uganda. All rights reserved.
         </small>
-        </div>
+      </div>
     </footer>
   )
 }

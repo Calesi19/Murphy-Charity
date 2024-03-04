@@ -73,6 +73,7 @@ function NavLogo() {
   return (
     <div className="flex items-center">
       <Image
+        className="lg:hidden"
         width={48}
         height={48}
         src={imgUrl}
