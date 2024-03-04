@@ -5,6 +5,8 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://localhost:8000"
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
+  title: "Murphy Charitable Foundation Uganda",
+  description: "Murphy Charitable Foundation Uganda",
 }
 
 export default function RootLayout(props: { children: React.ReactNode }) {

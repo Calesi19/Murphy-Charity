@@ -8,9 +8,9 @@ import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Murphy Charitable Foundation Uganda",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "Since its establishment in 2018, Murphy Charitable Foundation Uganda has made a significant impact on the lives of over 10,000 impoverished individuals in East-Northern Uganda. Through a diverse range of programs, including pen pal initiatives, women empowerment, youth empowerment, cancer awareness, child sponsorship, entrepreneurship, community outreaches, capacity building, mentoring, and community research on poverty levels in families, our organization has worked tirelessly to serve our communities and improve their well-being.",
 }
 
 const getCollectionsWithProducts = cache(
