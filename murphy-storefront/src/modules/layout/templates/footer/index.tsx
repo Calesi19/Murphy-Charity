@@ -50,10 +50,12 @@ export default async function Footer() {
           </Link>
         </ul>
       </nav>
+      <div className="w-full text-center">
       <small id="copyright" className="p-4 text-center w-full">
         Copyright © {(() => new Date().getFullYear())()} Murphy Charitable
         Foundation Uganda. All rights reserved.
-      </small>
+        </small>
+        </div>
     </footer>
   )
 }
